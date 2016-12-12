@@ -8,16 +8,163 @@
 	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </head>
 <body>
-<div class="container">
-	<div class="dropdown">
-		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">List<span class="caret"></span></button>
-		<ul class="dropdown-menu">
-			<li>Lorem ipsum.</li>
-			<li class="divider"><a href=""></a></li>
-			<li>Aliquid, molestiae.</li>
+<style>
+	.carousel-inner > .item > img,
+	.carousel-inner > .item > a > img {
+		width: 70%;
+		margin: auto;
+	}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">WebSiteName</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Page 1</a></li>
+			<li><a href="#">Page 2</a></li>
+			<li><a href="#">Page 3</a></li>
+			<li>
+				<div class="btn btn-group pull-right">
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login">Login</button>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#register">Register</button>
+
+				</div>
+			</li>
 		</ul>
 	</div>
+</nav>
+
+<div id="login" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Login Form</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-xs-12 form-group">
+						<label for="log" class="col-xs-4" >Login</label>
+						<div class="col-xs-8">
+							<input type="text" id="log" class="form-control">
+						</div>
+					</div>
+					<div class="col-xs-12 form-group">
+						<label for="pas" class="col-xs-4" >Password</label>
+						<div class="col-xs-8">
+							<input type="text" id="pas" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+
+				<div class="btn btn-group pull-right">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Login</button>
+					<button class="btn btn-warning" data-dismiss="modal">Register</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
 </div>
+<div id="register" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Login Form</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-xs-12 form-group">
+						<label for="name" class="col-xs-4" >Name</label>
+						<div class="col-xs-8">
+							<input type="text" id="name" placeholder="Enter name" class="form-control">
+						</div>
+					</div>
+
+					<div class="col-xs-12 form-group">
+						<label for="lname" class="col-xs-4" >Last name</label>
+						<div class="col-xs-8">
+							<input type="text" id="lname" placeholder="Enter lastname" class="form-control">
+						</div>
+					</div>
+
+					<div class="col-xs-12 form-group">
+						<label for="email" class="col-xs-4" >Email</label>
+						<div class="col-xs-8">
+							<input type="text" id="email" placeholder="Enter email" class="form-control">
+						</div>
+					</div>
+
+					<div class="col-xs-12 form-group">
+						<label for="tel" class="col-xs-4" >Phone</label>
+						<div class="col-xs-8">
+							<input type="number" id="tel" placeholder="Enter Phone" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+
+				<div class="btn btn-group pull-right">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Register</button>
+					<button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!--<div class="container">-->
+	<!--<br>-->
+	<!--<div id="myCarousel" class="carousel slide" data-ride="carousel">-->
+		<!--&lt;!&ndash; Indicators &ndash;&gt;-->
+		<!--<ol class="carousel-indicators">-->
+			<!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+			<!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
+			<!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
+			<!--<li data-target="#myCarousel" data-slide-to="3"></li>-->
+		<!--</ol>-->
+
+		<!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+		<!--<div class="carousel-inner" role="listbox">-->
+			<!--<div class="item active">-->
+				<!--<img src="http://lorempixel.com/900/800" alt="Chania" width="460" height="345">-->
+			<!--</div>-->
+
+			<!--<div class="item">-->
+				<!--<img src="http://lorempixel.com/800/800" alt="Chania" width="460" height="345">-->
+			<!--</div>-->
+
+			<!--<div class="item">-->
+				<!--<img src="http://lorempixel.com/900/700" alt="Flower" width="460" height="345">-->
+			<!--</div>-->
+
+			<!--<div class="item">-->
+				<!--<img src="http://lorempixel.com/800/900" alt="Flower" width="460" height="345">-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<!--&lt;!&ndash; Left and right controls &ndash;&gt;-->
+		<!--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">-->
+			<!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+			<!--<span class="sr-only">Previous</span>-->
+		<!--</a>-->
+		<!--<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">-->
+			<!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+			<!--<span class="sr-only">Next</span>-->
+		<!--</a>-->
+	<!--</div>-->
+<!--</div>-->
+
 
 </body>
 </html>
